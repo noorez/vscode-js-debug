@@ -71,7 +71,10 @@
       ],
       "args": [
         "--enable-proposed-api=ms-vscode.js-debug",
-        "--extensionDevelopmentPath=${workspaceFolder}/dist"
+        "--extensionDevelopmentPath=${workspaceFolder}/dist",
+        // js-debug-nightly registers the same debug types and would otherwise
+        // take precedence over the version being developed here.
+        "--disable-extension=ms-vscode.js-debug-nightly"
       ],
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
